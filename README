@@ -1,0 +1,69 @@
+Name: Yuchen Xia
+USC NetID: xiayuche
+CS 455 PA4
+Fall 2021
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+Yuchen Xia
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+In the AnagramDictionary class, the data in a dictionary is stored as a HashMap,
+with a canonical string as the key and a Hashset containg words as the value.
+When processing the dictionary, words are regulated to a canonical string,
+and added to the HashMap with that as the key and the word itself added to the
+corresponding HashSet. Since the order of inserting is not important, this is 
+an efficient approach to add and search the data. And to obtain anagrams of 
+a given string only requires a canonical version of the string. This method 
+can be catagorized as the second approach in the assignment description.
+
+In the Rack class, the core data is stored as a string containing unique letters
+and a corresponding multiplicity array. It is stored this way to conform to the
+given allSubsets() method. The core method, printAllWords() is implemented by 
+first obtaining all subsets of the rack, regulating them, and plug the keys in 
+the given AnagramDictionary. Then add all the returned words to an ArrayList of
+Word. Before printing the words out, they are first sorted with the Collections
+sort() method to satisfy the printing requirements.
+
+In addition to implementing the required Rack, AnagramDictionary, ScoreTable 
+class and the WordFinder, I also created classes Word and StringRegulator to
+help with the process. 
+
+Word represents the concept of a Scrabble word, which stores the content 
+as well as the score of the word, and also has a compareTo method for it to be 
+conveniently sorted. 
+
+StringRegulator contains a static sorting method for a String, which returns
+an alphabetically sorted version  of the given String. 
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
